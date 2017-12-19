@@ -1,0 +1,132 @@
+@font-face { /* font that went over the images */
+    font-family: extrahot;
+    src: url(fonts/extrahot.ttf);
+}
+header {
+	background-color:rgb(0, 193, 193); 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	
+	
+}
+
+
+header h1 {
+	font-size: 3em;	
+	color: black;
+	font-weight: bold;
+	padding-top:20px;
+	text-align:center;
+}
+.logo{
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 25%;
+    max-width: 100%;
+	width:25%;
+    text-align: center;
+	display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav ul{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+	
+a{
+ text-decoration:none;
+ color: black;
+ font-weight: bold;
+}
+a:hover{
+	background-color:orange;	
+	color:black;
+}
+
+li{
+	list-style:none;
+}
+.grilled{
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+    max-width: 100%;
+	width:100%;
+    text-align: center;
+
+}
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+   text-align:center;
+   }
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
+   color:rgb(15, 72, 204);
+   font-size:50px;
+   font-family:extrahot;
+}
+.pancakes{
+	position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 25%;
+    max-width: 100%;
+	width:100%;
+    text-align: center;
+}
+.soup{
+	position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 25%;
+    max-width: 100%;
+	width:100%;
+    text-align: center;
+}
+.pizza{
+	position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    max-width: 100%;
+	width:100%;
+    text-align: center;
+	
+}
+/* Footer of the webpage */footer{
+	background-color:rgb(0, 193, 193);
+	Height:70px;
+	padding-top:1px;
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}

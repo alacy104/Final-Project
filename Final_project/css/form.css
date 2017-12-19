@@ -1,0 +1,28 @@
+body{
+	background-color:Black;
+	color:white;
+}
+.form{
+	
+    width: 645px;
+	height:800px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+	margin-top: 50px;
+	text-align:center;
+	background-color:gray;
+	border-style: double;
+	border-color:orange;
+	border-width:10px;
+	padding-top:100px;
+	padding-bottom:100px;
+	margin-bottom:50px;
+	
+}
+form{
+
+background-color:gray;
+
+
+}

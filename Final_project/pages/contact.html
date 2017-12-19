@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Java form</title>
+	<link rel="stylesheet" href="../css/form.css">
+	<script>
+		
+		/* set the date for the date field */
+		function SetDate()
+		{
+		var date = new Date();
+
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+
+		var today = month+ "-" + day + "-" + year;
+
+
+		document.getElementById('date').value = today;
+		}
+				/* starts validating the rest of the page */
+		function validateForm(){
+		var name = document.forms["myForm"]["name"].value;
+		var email = document.forms["myForm"]["email"].value;
+
+		var reason = document.forms["myForm"]["reason"].value;
+		
+		nameinput = name.value;
+		reasoninput = reason.value;
+		var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{3})$/;
+		
+
+		
+			if (name == "") {
+				alert("Please enter a name");
+				return false;
+			}
+			 if (name.length<6){
+			alert("The name field cannot contain less than 6 characters!")
+			return false
+			}
+		
+			if (email == "") {
+				alert("Please enter a email");
+				return false;
+			}
+			 if(!regex.test(email)){
+                alert("Enter a valid email");
+                return false;
+                }
+	
+			if (reason == "") {
+				alert("Please enter a reason");
+				return false;
+			}
+			if (reason.length > 256){
+			alert("The reason cannot exceed 256 characters")
+			return false
+			}
+			
+			else  /* if all info is vaild it will allow send */
+			  {       
+			alert("Thank you for Your submisson");     
+				
+				return true;     
+			  }    
+
+	}
+	</script>
+</head>
+	<body onload="SetDate();"> <!-- sets date on form -->
+		<div class="form"> <!-- form starts -->
+			<h1> Contact Us</h1><br>
+			<form class="form2" name="myForm" action="mailto: dummy@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+			
+				Name:<br>
+				<input type="text" name="name"><br><br><br>
+					
+				Email Address<br>
+				<input type="text" name="email"><br><br><br>
+				
+				Date of Return<br>
+				<input type="text" id="date" readonly><br><br><br>
+				
+				Reason For Contact<br>
+				<textarea name="reason" rows="10" cols="30"></textarea><br><br><br>
+				
+				<input type="reset" value="Reset">
+				
+				<input type="submit" value="Submit" onclick="validateForm()">
+			</form>
+		</div>
+
+		
+	</body>
+</html>
